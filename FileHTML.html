@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHaven – Bảo Vệ Giỏ Hàng & Hộp Thoại Thanh Toán</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="FileCSS.css" />
+</head>
+<body>
+
+    <header class="thanh-dau">
+        <div class="khung-chua thanh-dau-trong">
+            <div class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                <span>BookHaven</span>
+            </div>
+            
+            <div class="thanh-tim-kiem">
+                <input type="text" id="oNhapTimKiem" placeholder="Tìm tên sách..." oninput="timKiemSach()" />
+            </div>
+
+            <div class="goc-phai-header">
+                <div id="vungThanhVien">
+                    <button class="nut-header-phu" onclick="hienThiKhungDangKy()">Đăng ký</button>
+                    <button class="nut-header-chinh" onclick="hienThiKhungDangNhap()">Đăng nhập</button>
+                </div>
+
+                <div class="cum-gio-hang">
+                    <button class="nut-gio-hang" onclick="moDongGioHangNho()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="soDemGioHang">0</span>
+                    </button>
+                    
+                    <div class="khung-gio-hang-nho an-di" id="cuaSoGioHangNho">
+                        <h4>Sản phẩm đã thêm</h4>
+                        <div id="danhSachMonHangNho"></div>
+                        <div class="tong-tien-nho">
+                            <span>Tổng tiền:</span>
+                            <strong id="tongTienGioHangNho">0đ</strong>
+                        </div>
+                        <button class="nut-di-den-thanh-toan" onclick="moKhungThanhToanGiuaManHinh()">Thanh Toán Ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="khung-popup-auth an-di" id="khungDangKy">
+        <h3>Đăng Ký Thành Viên</h3>
+        <input type="text" id="taiKhoanDK" placeholder="Tên đăng nhập mới..." />
+        <input type="password" id="matKhauDK" placeholder="Mật khẩu..." />
+        <input type="password" id="nhapLaiMatKhauDK" placeholder="Nhập lại mật khẩu..." />
+        <div class="nhom-nut-auth">
+            <button class="nut-xac-nhan" onclick="xuLyDangKy()">Đăng ký</button>
+            <button class="nut-huy" onclick="hienThiKhungDangKy()">Hủy</button>
+        </div>
+    </div>
+
+    <div class="khung-popup-auth an-di" id="khungDangNhap">
+        <h3>Đăng Nhập Hệ Thống</h3>
+        <input type="text" id="taiKhoanDN" placeholder="Tên đăng nhập..." />
+        <input type="password" id="matKhauDN" placeholder="Mật khẩu..." />
+        <div class="nhom-nut-auth">
+            <button class="nut-xac-nhan" onclick="xuLyDangNhap()">Đăng nhập</button>
+            <button class="nut-huy" onclick="hienThiKhungDangNhap()">Hủy</button>
+        </div>
+    </div>
+
+    <section class="banner-chao-mung">
+        <div class="khung-chua">
+            <h1>Khám phá thế giới qua từng trang sách</h1>
+            <p>Hệ thống bắt buộc đăng nhập để mua hàng và hộp thoại đặt hàng thông minh.</p>
+        </div>
+    </section>
+
+    <section class="phan-loc">
+        <div class="khung-chua">
+            <h3>Danh mục sách</h3>
+            <div class="cac-nut-loc">
+                <button class="nut-loc kich-hoat" onclick="locTheLoai('all', this)">Tất Cả</button>
+                <button class="nut-loc" onclick="locTheLoai('van-hoc', this)">Văn Học</button>
+                <button class="nut-loc" onclick="locTheLoai('truyen-tranh', this)">Truyện Tranh</button>
+                <button class="nut-loc" onclick="locTheLoai('thieu-nhi', this)">Thiếu Nhi</button>
+                <button class="nut-loc" onclick="locTheLoai('khoa-hoc', this)">Khoa Học</button>
+                <button class="nut-loc" onclick="locTheLoai('ky-nang', this)">Kỹ Năng</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="phan-cua-hang">
+        <div class="khung-chua">
+            <p id="nhanSoLuong">Hiển thị: 0 cuốn sách</p>
+            <div class="luoi-sach" id="khungLuoiSach"></div>
+        </div>
+    </section>
+
+    <div class="lop-nen-mo an-di" id="lopNenMo" onclick="dongKhungThanhToan()"></div>
+
+    <div class="khung-hop-thoai-tt an-di" id="hopThanhToanGiuaMan">
+        <button class="nut-dong-hop-thoai" onclick="dongKhungThanhToan()"><i class="fa-solid fa-xmark"></i></button>
+        <h3><i class="fa-solid fa-credit-card"></i> Thông Tin Thanh Toán</h3>
+        <p class="ghi-chu-dien">Vui lòng hoàn thành thông tin giao nhận bên dưới:</p>
+        
+        <div class="form-thanh-toan">
+            <input type="text" id="tenNguoiNhan" placeholder="Họ tên người nhận..." />
+            <input type="text" id="sdtNguoiNhan" placeholder="Số điện thoại liên hệ..." />
+            
+            <input type="text" id="diaChiNhan" placeholder="Địa chỉ giao hàng (Số nhà, đường, quận...)..." />           
+            <label for="phuongThucTT">Phương thức thanh toán:</label>
+            <select id="phuongThucTT">
+                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                <option value="banking">Chuyển khoản ngân hàng (Quét mã QR)</option>
+            </select>
+            
+            <div id="vungChuaAnhQR" class="an-di">
+                <p><strong>Quét mã QR để thanh toán đơn hàng:</strong></p>
+                <img id="anhMaQR" src="" alt="Mã QR VietQR" />
+                <button type="button" class="nut-xac-nhan-chuyen-khoan" onclick="hoanThanhChuyenKhoan()">Xác Nhận Đã Chuyển Khoản</button>
+            </div>
+
+            <button id="nutHanhDongChinh" class="nut-gui-don-hang" onclick="xuLyDatHang()">Xác Nhận Đặt Hàng</button>
+        </div>
+    </div>
+
+    <footer class="chan-trang">
+        <p>© 2026 BookHaven - Bài Tập Cuối Môn</p>
+    </footer>
+
+    <script src="FileJS.js"></script>
+</body>
+</html>
