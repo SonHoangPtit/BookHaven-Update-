@@ -393,6 +393,7 @@ function xuLyDatHang() {
         hoanThanhDonHang();
     } 
     // TH 2: Chuyển khoản (Banking) -> Sinh mã QR động và ẩn nút đặt hàng chính đi
+// TH 2: Chuyển khoản (Banking) -> Sinh mã QR động và ẩn nút đặt hàng chính đi
     else if (phuongThuc === 'banking') {
         const tongTien = tinhTongTien();
         const MA_NGAN_HANG = 'MB';             
@@ -402,6 +403,9 @@ function xuLyDatHang() {
         const theAnhQR = document.getElementById('anhMaQR');
         theAnhQR.src = `https://img.vietqr.io/image/${MA_NGAN_HANG}-${SO_TAI_KHOAN}-compact2.png?amount=${tongTien}&addInfo=${NOI_DUNG}`;
         
+        // HIỂN THỊ THÔNG TIN ĐỊA CHỈ, SĐT, TÊN KHI CHỌN CHUYỂN KHOẢN
+        alert(`ℹ️ Thông tin thanh toán chuyển khoản:\nKhách hàng: ${ten}\nSố điện thoại: ${sdt}\nĐịa chỉ nhận: ${diaChi}\nTổng tiền: ${tongTien.toLocaleString('vi-VN')}đ\nVui lòng quét mã QR hiển thị trên màn hình để hoàn tất.`);
+
         // Hiện vùng quét mã QR chứa nút Xác nhận giao dịch mới lên
         document.getElementById('vungChuaAnhQR').classList.remove('an-di');
         // Ẩn nút "Xác Nhận Đặt Hàng" chính để bắt buộc tương tác nút hoàn tất chuyển khoản
