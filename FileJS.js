@@ -1,6 +1,4 @@
-// ================= DANH SÁCH DỮ LIỆU SÁCH =================
 const mangSach = [
-    // ================= THỂ LOẠI 1: VĂN HỌC (van-hoc) =================
     { id: 1, title: 'Nhà Giả Kim', author: 'Paulo Coelho', price: 79000, category: 'van-hoc', img: 'https://www.fahasa.com/blog/wp-content/uploads/2024/12/nha-gia-kim.jpg' },
     { id: 2, title: 'Số Đỏ', author: 'Vũ Trọng Phụng', price: 68000, category: 'van-hoc', img: 'https://down-vn.img.susercontent.com/file/923a128a105332523dd17e2ebdf01f18' },
     { id: 3, title: 'Rừng Na Uy', author: 'Haruki Murakami', price: 125000, category: 'van-hoc', img: 'https://cdn1.fahasa.com/media/catalog/product/8/9/8935235242425.jpg' },
@@ -12,7 +10,6 @@ const mangSach = [
     { id: 9, title: 'Tắt Đèn', author: 'Ngô Tất Tố', price: 45000, category: 'van-hoc', img: 'https://cdn1.fahasa.com/media/catalog/product/i/m/image_195509_1_39597.jpg' },
     { id: 10, title: 'Chí Phèo', author: 'Nam Cao', price: 48000, category: 'van-hoc', img: 'https://cdn1.fahasa.com/media/catalog/product/v/n/vn-11134207-7ra0g-m6nr4tgwi1k706_1.jpg' },
 
-    // ================= THỂ LOẠI 2: TRUYỆN TRANH (truyen-tranh) =================
     { id: 11, title: 'One Piece - Tập 100', author: 'Eiichiro Oda', price: 30000, category: 'truyen-tranh', img: 'https://cdn1.fahasa.com/media/catalog/product/o/n/one-piece---tap-100---bia-r_i-_-obi.jpg' },
     { id: 12, title: 'Hunter x Hunter - Tập 1', author: 'Yoshihiro Togashi', price: 30000, category: 'truyen-tranh', img: 'https://dilib.vn/img/news/2024/06/larger/15833-tho-san-hunter-x-hunter-1.webp?v=7953' },
     { id: 13, title: 'Naruto - Tập 72', author: 'Masashi Kishimoto', price: 30000, category: 'truyen-tranh', img: 'https://pictures.abebooks.com/isbn/9788483573006-us.jpg' },
@@ -24,7 +21,6 @@ const mangSach = [
     { id: 19, title: 'Jujutsu Kaisen - Tập 20', author: 'Gege Akutami', price: 35000, category: 'truyen-tranh', img: 'https://cdn1.fahasa.com/media/catalog/product/9/7/9784088832012.jpg' },
     { id: 20, title: 'Bleach - Tập 74', author: 'Tite Kubo', price: 30000, category: 'truyen-tranh', img: 'https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m3c9v0j9hi94c0' },
 
-    // ================= THỂ LOẠI 3: THIẾU NHI (thieu-nhi) =================
     { id: 21, title: 'Dế Mèn Phiêu Lưu Ký', author: 'Tô Hoài', price: 55000, category: 'thieu-nhi', img: 'https://www.netabooks.vn/Data/Sites/1/Product/31071/de-men-phieu-luu-ky-1.jpg' },
     { id: 22, title: 'Kính Vạn Hoa', author: 'Nguyễn Nhật Ánh', price: 95000, category: 'thieu-nhi', img: 'https://www.netabooks.vn/Data/Sites/1/Product/47493/kinh-van-hoa-tap-6-ki-niem-65-nam-nxb-kim-dong-bia-cung.jpg' },
     { id: 23, title: 'Hoàng Tử Bé', author: 'Antoine de Saint-Exupéry', price: 65000, category: 'thieu-nhi', img: 'https://bizweb.dktcdn.net/thumb/1024x1024/100/576/749/products/hoang-tu-be-tb-2022-6e3dfd01ace949c6b114186402117726-5f8abf11a050414eb4996caabc94e49a.jpg?v=1760792123947' },
@@ -36,7 +32,6 @@ const mangSach = [
     { id: 29, title: 'Heidi - Cô Bé Ở Vùng Núi Alps', author: 'Johanna Spyri', price: 80000, category: 'thieu-nhi', img: 'https://file.hstatic.net/1000328521/file/photo_2020-06-04_11-15-38_787b2c8f076643ed8998e2e056bf9eae_grande.jpg' },
     { id: 30, title: 'Gió Qua Rặng Liễu', author: 'Kenneth Grahame', price: 88000, category: 'thieu-nhi', img: 'https://dinhtibooks.com.vn/images/products/large/900x900_602868d7ac7c45948fdcc5b23fa812d3.webp' },
 
-    // ================= THỂ LOẠI 4: KHOA HỌC (khoa-hoc) =================
     { id: 31, title: 'Vũ Trụ (Cosmos)', author: 'Carl Sagan', price: 145000, category: 'khoa-hoc', img: 'https://www.netabooks.vn/Data/Sites/1/Product/687/thumbs/vu-tru-carl-sagan.jpg' },
     { id: 32, title: 'Lược Sử Thời Gian', author: 'Stephen Hawking', price: 115000, category: 'khoa-hoc', img: 'https://cdn1.fahasa.com/media/catalog/product/8/9/8934974179238.jpg' },
     { id: 33, title: 'Tự Nhiên Và Khám Phá', author: 'Đội ngũ Khoa Học', price: 180000, category: 'khoa-hoc', img: 'https://pos.nvncdn.com/fd5775-40602/ps/20210113_VqhfPkirnYiLy9qGH5FzA70f.png?v=1673774094' },
@@ -48,7 +43,6 @@ const mangSach = [
     { id: 39, title: 'Hóa Học Cơ Bản', author: 'Đội Ngũ Sư Phạm', price: 85000, category: 'khoa-hoc', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYKlih5j7ZM-aKLqtTXFblCe_PlfZxGAURLQ&s' },
     { id: 40, title: 'Toán Học Vui', author: 'Raymond Smullyan', price: 75000, category: 'khoa-hoc', img: 'https://cdn1.fahasa.com/media/catalog/product/i/m/image_195509_1_18071.jpg' },
 
-    // ================= THỂ LOẠI 5: KỸ NĂNG SỐNG (ky-nang) =================
     { id: 41, title: 'Tuổi Trẻ Đáng Giá Bao Nhiêu', author: 'Rosie Nguyễn', price: 72000, category: 'ky-nang', img: 'https://cdn1.fahasa.com/media/catalog/product/i/m/image_239651.jpg' },
     { id: 42, title: 'Đắc Nhân Tâm', author: 'Dale Carnegie', price: 86000, category: 'ky-nang', img: 'https://cdn1.fahasa.com/media/catalog/product/d/n/dntttttuntitled.jpg' },
     { id: 43, title: 'Hạt Giống Tâm Hồn', author: 'Jack Canfield', price: 65000, category: 'ky-nang', img: 'https://cdn1.fahasa.com/media/catalog/product/8/9/8935086857434.jpg' },
@@ -61,7 +55,6 @@ const mangSach = [
     { id: 50, title: 'Thức Tỉnh Mục Đích Sống', author: 'Eckhart Tolle', price: 110000, category: 'ky-nang', img: 'https://thuviennhadat.com.vn/storage/tin-tuc/review-thuc-tinh-muc-dich-song/review-thuc-tinh-muc-dich-song-min.jpg' }
 ];
 
-// ================= BIẾN TOÀN CỤC KHỞI TẠO =================
 let danhSachTaiKhoan = JSON.parse(localStorage.getItem('danhSachTaiKhoan')) || [{ username: 'admin', password: '123' }];
 let taiKhoanHienTai = localStorage.getItem('taiKhoanHienTai') || null;
 
@@ -69,13 +62,11 @@ let gioHang = [];
 let theLoaiHienTai = 'all';
 let tuKhoaTimKiem = '';
 
-// ================= SỰ KIỆN KHI TẢI XONG TRANG =================
 window.addEventListener('DOMContentLoaded', () => {
     hienThiDanhSachSach();
     kiemTraTrangThaiDangNhapCu();
 });
 
-// Hàm hỗ trợ cập nhật giao diện Thành viên (Đã tối ưu tránh trùng code)
 function capNhatGiaoDienThanhVien(username) {
     const vungThanhVien = document.getElementById('vungThanhVien');
     if (!vungThanhVien) return;
@@ -99,7 +90,6 @@ function kiemTraTrangThaiDangNhapCu() {
     }
 }
 
-// ================= LOGIC HIỂN THỊ CỬA HÀNG SÁCH =================
 function hienThiDanhSachSach() {
     const luoiSach = document.getElementById('khungLuoiSach'); 
     if (!luoiSach) return;
@@ -141,7 +131,6 @@ function timKiemSach() {
     hienThiDanhSachSach();
 }
 
-// ================= LOGIC ĐĂNG KÝ / ĐĂNG NHẬP / ĐĂNG XUẤT =================
 function hienThiKhungDangKy() {
     document.getElementById('cuaSoGioHangNho').classList.add('an-di');
     document.getElementById('khungDangKy').classList.toggle('an-di');
@@ -224,7 +213,6 @@ function xuLyDangXuat() {
     alert("Đã đăng xuất tài khoản!");
 }
 
-// ================= LOGIC QUẢN LÝ GIỎ HÀNG =================
 function themVaoGio(idSach) {
     if (taiKhoanHienTai === null) {
         alert("⚠️ Bạn phải ĐĂNG NHẬP tài khoản trước khi thực hiện thêm sách vào giỏ hàng!");
@@ -317,7 +305,6 @@ function veGioHangNho() {
     if (oTongTien) oTongTien.innerText = tinhTongTien().toLocaleString('vi-VN') + 'đ';
 }
 
-// Hàm tăng số lượng khi bấm nút [+]
 function tangSoLuong(idSach) {
     const monHang = gioHang.find(item => item.sach.id === idSach);
     if (monHang) {
@@ -326,7 +313,6 @@ function tangSoLuong(idSach) {
     }
 }
 
-// Hàm giảm số lượng khi bấm nút [-] (Nếu giảm về 0 sẽ tự xóa khỏi giỏ)
 function giamSoLuong(idSach) {
     const monHang = gioHang.find(item => item.sach.id === idSach);
     if (monHang) {
@@ -334,17 +320,15 @@ function giamSoLuong(idSach) {
         
         if (monHang.soLuong <= 0) {
             gioHang = gioHang.filter(item => item.sach.id !== idSach);
-        }
-        
-        lamMoiGiaoDienGioHang();
-        
+        }        
+        lamMoiGiaoDienGioHang();      
         if (gioHang.length === 0) {
             dongKhungThanhToan();
         }
     }
 }
 
-// ================= LOGIC HỘP THOẠI THANH TOÁN =================
+
 function moKhungThanhToanGiuaManHinh() {
     if (gioHang.length === 0) {
         alert("Giỏ hàng rỗng, không thể mở cổng thanh toán!");
@@ -354,13 +338,11 @@ function moKhungThanhToanGiuaManHinh() {
     document.getElementById('lopNenMo').classList.remove('an-di');
     document.getElementById('hopThanhToanGiuaMan').classList.remove('an-di');
     
-    // Reset toàn bộ form nhập liệu về trạng thái trống ban đầu
     document.getElementById('tenNguoiNhan').value = '';
     document.getElementById('sdtNguoiNhan').value = '';
     document.getElementById('diaChiNhan').value = '';
     document.getElementById('phuongThucTT').value = 'cod';
     
-    // Luôn ẩn vùng chứa ảnh QR và hiện lại nút Đặt hàng chính khi bắt đầu mở khung lên
     document.getElementById('vungChuaAnhQR').classList.add('an-di');
     document.getElementById('nutHanhDongChinh').classList.remove('an-di');
 }
@@ -387,13 +369,10 @@ function xuLyDatHang() {
         return;
     }
 
-    // TH 1: Thanh toán Tiền mặt (COD) -> Alert và kết thúc luôn
     if (phuongThuc === 'cod') {
         alert(`🎉 Đặt đơn hàng thành công (COD)!\nKhách hàng: ${ten}\nĐịa chỉ nhận: ${diaChi}\nTổng tiền: ${tinhTongTien().toLocaleString('vi-VN')}đ`);
         hoanThanhDonHang();
     } 
-    // TH 2: Chuyển khoản (Banking) -> Sinh mã QR động và ẩn nút đặt hàng chính đi
-// TH 2: Chuyển khoản (Banking) -> Sinh mã QR động và ẩn nút đặt hàng chính đi
     else if (phuongThuc === 'banking') {
         const tongTien = tinhTongTien();
         const MA_NGAN_HANG = 'MB';             
@@ -402,25 +381,20 @@ function xuLyDatHang() {
 
         const theAnhQR = document.getElementById('anhMaQR');
         theAnhQR.src = `https://img.vietqr.io/image/${MA_NGAN_HANG}-${SO_TAI_KHOAN}-compact2.png?amount=${tongTien}&addInfo=${NOI_DUNG}`;
-        
-        // HIỂN THỊ THÔNG TIN ĐỊA CHỈ, SĐT, TÊN KHI CHỌN CHUYỂN KHOẢN
         alert(`ℹ️ Thông tin thanh toán chuyển khoản:\nKhách hàng: ${ten}\nSố điện thoại: ${sdt}\nĐịa chỉ nhận: ${diaChi}\nTổng tiền: ${tongTien.toLocaleString('vi-VN')}đ\nVui lòng quét mã QR hiển thị trên màn hình để hoàn tất.`);
-
-        // Hiện vùng quét mã QR chứa nút Xác nhận giao dịch mới lên
         document.getElementById('vungChuaAnhQR').classList.remove('an-di');
-        // Ẩn nút "Xác Nhận Đặt Hàng" chính để bắt buộc tương tác nút hoàn tất chuyển khoản
         document.getElementById('nutHanhDongChinh').classList.add('an-di');
     }
 }
 
-// Xử lý khi người dùng bấm nút "Xác Nhận Đã Chuyển Khoản"
+
 function hoanThanhChuyenKhoan() {
     const ten = document.getElementById('tenNguoiNhan').value.trim();
     alert(`🎉 Hệ thống đã ghi nhận thông tin!\nĐơn hàng của khách hàng [${ten}] đang được kiểm tra giao dịch và chuẩn bị đóng gói.`);
     hoanThanhDonHang();
 }
 
-// Dọn dẹp giỏ hàng, đóng modal
+
 function hoanThanhDonHang() {
     gioHang = [];
     lamMoiGiaoDienGioHang();
